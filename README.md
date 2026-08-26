@@ -1,17 +1,16 @@
-# Hoja de Vida - Miguel Mateo Ramos Rodas
-
+## Nombre
 **Estudiante:** Miguel Mateo Ramos Rodas  
 **Carrera:** Ingeniería de Sistemas  
 **Universidad:** Universidad Católica Boliviana  
 
 ---
 
-## 📄 Descripción del Proyecto
-Este proyecto consiste en un sitio web interactivo y accesible que presenta mi hoja de vida profesional. Ha sido estructurado íntegramente con HTML5 semántico, incluyendo datos de contacto, perfil profesional, experiencia, habilidades técnicas, proyectos destacados y un portafolio multimedia interactivo.
+## Descripción
+Este proyecto consiste en un sitio web que presenta mi hoja de vida, con todas la caracteristicas y etiquetas de html nativo, incluyendo la implementacion de form, multimedia y un portafolio interactivo.
 
 ---
 
-## 🏷️ Etiquetas HTML5 Utilizadas
+## Etiquetas HTML5 Utilizadas
 El sitio implementa una amplia variedad de etiquetas nativas para estructurar semánticamente el contenido:
 
 * **Estructura semántica:** `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`.
@@ -23,7 +22,7 @@ El sitio implementa una amplia variedad de etiquetas nativas para estructurar se
 
 ---
 
-## ♿ Elementos de Accesibilidad Implementados
+## Elementos de Accesibilidad Implementados
 Se siguieron las pautas de accesibilidad web (WCAG) para garantizar una correcta navegación en lectores de pantalla y mediante teclado:
 
 1. **Enlace de salto accesible (Skip Link):** Permite a los usuarios de lectores de pantalla u omitir la navegación e ir directamente al contenido principal (`<a href="#main" class="skip-link">`).
@@ -37,9 +36,9 @@ Se siguieron las pautas de accesibilidad web (WCAG) para garantizar una correcta
 
 ---
 
-## 🚀 Instrucciones para Visualizar el Proyecto
+## Instrucciones para Visualizar el Proyecto
 
-### Opción 1: Localmente
+## Localmente
 1. Clona el repositorio o descarga el archivo `.zip`:
    ```bash
-   git clone [https://github.com/TU-USUARIO/hoja-vida-ramos-miguel.git](https://github.com/TU-USUARIO/hoja-vida-ramos-miguel.git)
+   git clone [https://github.com/mramosr-cyber/hoja-vida-Ramos-Miguel.git](https://github.com/mramosr-cyber/hoja-vida-Ramos-Miguel.git)
