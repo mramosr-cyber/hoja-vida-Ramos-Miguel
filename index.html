@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoja de vida - Miguel Mateo Ramos Rodas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <script src="js/script.js"></script>
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
     <header role="banner">
         <nav aria-label="Navegacion principal del sitio">
@@ -23,15 +28,15 @@
             </ul>
         </nav> 
     <main id="main">
-    <section id="encabezado" aria-labelledby="encabezado-heading">
-        <img src="assets/images/foto.jpeg"
+    <section id="encabezado" class="encabezado" aria-labelledby="encabezado-heading">
+        <img src="assets/images/foto.jpeg" class="foto"
             alt="Fotografía profesional Miguel Ramos">
 
-        <h1>Miguel Mateo Ramos Rodas</h1>
+        <h1 class="nombre">Miguel Mateo Ramos Rodas</h1>
 
-        <p>Ingeniero de Sistemas</p>
+        <p class="profesion">Ingeniero de Sistemas</p>
 
-        <address>
+        <address class="direccion">
             La Paz, Bolivia<br>
             mramos.r@ucb.edu.bo<br>
             +591 63266500
@@ -81,7 +86,7 @@
     </section>
     <section id="experiencia" aria-labelledby="experiencia-heading">
         <h2 id="experiencia-heading">Experiencia profesional</h2>
-    <article>
+    <article id="card">
         <h3>Rol desempeñado</h3>
         <p>Programador en un videojuego de C++</p>
         <p>Universidad Catolica Boliviana</p>
@@ -96,9 +101,7 @@
             <li>Mayor entendimiento al manejo de funciones y posibilidades que da el lenguaje <em>C++</em>.</li>
         </ol>
     </article>
-    </section>
-    <section id="experiencia2">
-    <article>
+    <article id="card">
         <h3>Rol desempeñado</h3>
         <p>Actor Principal y Performer de Repertorio</p>
         <p>Teatro Triskel</p>
@@ -113,9 +116,7 @@
             <li>Presentada y ganadora a mejor obra del concurso Raul Salmon de la Barra</li>
         </ol>
     </article>
-    </section>
-    <section id="experiencia2">
-    <article>
+    <article id="card">
         <h3>Rol desempeñado</h3>
         <p>Voluntario en un asilo de ancianos</p>
         <p>Asilo San Ramon</p>
@@ -132,7 +133,7 @@
     </section>
     <section id="habilidades" aria-labelledby="habilidades-heading">
         <h2 id="habilidades-heading">Habilidades Tecnicas</h2>
-        <p>Lenguajes o tecnologias</p>
+        <p class="lista">Lenguajes o tecnologias</p>
         <ul>
             <li>Python  <meter max="100" value="80"></meter></li>
             <li>C++  <meter max="100" value="70"></meter></li>
@@ -140,13 +141,13 @@
             <li>Java <meter max="100" value="85"></meter></li>
             <li>html <meter max="100" value="40"></meter></li>
         </ul>
-        <p>Herramientas de desarrollo</p>
+        <p class="lista">Herramientas de desarrollo</p>
         <ul>
             <li>GitHub  <meter max="100" value="60"></meter></li>
             <li>VSCode  <meter max="100" value="95"></meter></li>
             <li>Docker  <meter max="100" value="30"></meter></li>
         </ul>
-        <p>Habilidades profesionales</p>
+        <p class="lista">Habilidades profesionales</p>
         <ul>
             <li>Rapida respuesta a problemas</li>
             <li>Trabajo en equipos grandes o pequeños y comunicacion</li>
@@ -197,7 +198,7 @@
 
     <section id="idiomas" aria-labelledby="idiomas-heading">
         <h2 id="idiomas-heading">Idiomas</h2>
-        <table border="1" cellpadding="8" cellspacing="0">
+        <table border="1" cellpadding="8" cellspacing="0" class="tabla">
             <caption>Experiencia en idiomas</caption>
             <thead>
                 <tr>
@@ -300,7 +301,7 @@
         <figcaption>Demostración en video del funcionamiento de la aplicacion tutor.</figcaption>
     </figure>
     </section>
-    <section id="contacto" aria-labelledby="contacto-heading">
+    <section id="contacto" class="contacto" aria-labelledby="contacto-heading">
         <h2 id="contacto-heading">Contacto</h2>
     <form action="#" method="post">
     <fieldset>
@@ -313,7 +314,7 @@
       <div>
         <label for="email">Correo electrónico:</label><br>
         <input type="email" id="email" name="email" required aria-describedby="email-ayuda">
-        <small id="email-ayuda">Ejemplo: usuario@dominio.com</small>
+        <small id="email-ayuda" class="ayuda">Ejemplo: usuario@dominio.com</small>
       </div><br>
 
       <div>

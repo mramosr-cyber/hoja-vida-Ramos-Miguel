@@ -1,0 +1,159 @@
+:root {
+    --color: rgb(90, 16, 36);
+    --subheaders:#1a365d; 
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+nav {
+    background-color: rgb(47, 12, 3);
+    border-width: 3px;   
+    border-style: dashed;    
+    border-color: rgb(103, 18, 18); 
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem;
+}
+
+nav a {
+    color: rgb(198, 7, 58);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    font-weight: 400;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgb(118, 19, 49);
+    border-radius: 4px;
+}
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 1rem;
+    background-color: rgba(160, 62, 62, 0.897);
+    box-shadow: var(--shadow);
+}
+
+.foto {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px rgb(148, 2, 2);
+}
+.nombre {
+    color: var(--color);
+}
+
+.profesion {
+    color: var(--subheaders);
+}
+
+.direccion {
+    color: var(--subheaders);
+}
+
+section {
+    background-color: rgba(160, 62, 62, 0.897);
+    padding: 10px;
+}
+
+h2 {
+    color: var(--color);
+}
+h3{
+    color: var(--subheaders);
+}
+h4 {
+    color: var(--subheaders);
+}
+details {
+    padding: 10px;
+    display: block;
+    font-family: cursive;
+}
+ul {
+    padding: 5px;
+    margin: 12px;
+}
+.lista {
+    font-size: 20px;
+    color: var(--subheaders);
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+caption{
+    font-size: 2rem;
+    color: var(--color)
+}
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--subheaders);
+}
+
+th {
+    background-color: rgb(185, 117, 117);
+    color: var(--color);
+}
+.contacto {
+    background-color:  rgb(111, 57, 73);
+    
+}
+fieldset {
+    font-size: 1rem;
+    
+    border-color: rgb(111, 57, 73);
+}
+input, select, textarea, button {
+    background-color: rgb(185, 117, 117) ;
+}
+label, legend, .ayuda{
+    color: var(--subheaders);
+}
+footer{
+    background-color: rgba(160, 62, 62, 0.897);
+}
