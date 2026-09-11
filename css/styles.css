@@ -1,7 +1,12 @@
 :root {
-    --color: rgb(90, 16, 36);
-    --subheaders:#1a365d; 
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --color-fondo: rgb(245, 238, 228);
+    --color-titulos: rgb(194, 65, 12);
+    --color-textos: rgb(38, 32, 28);
+    --color-bordes-secciones: rgb(222, 206, 186);
+    --color-bordes-tablas: rgb(205, 185, 160);
+    --color-inputs: rgb(252, 248, 240);
+    --color-boton: rgb(217, 119, 6);
+    --color-boton-texto: rgb(255, 255, 255);
 }
 
 * {
@@ -9,20 +14,20 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     transition: background-color 0.4s ease, color 0.4s ease;
-    
-    background-color: #ffffff;
-    color: #333333;
+    background-color: var(--color-fondo);
+    color: var(--color-textos);
 }
 
+/* Accesibilidad */
 .skip-link {
     position: absolute;
     top: -40px;
     left: 0;
-    background: var(--primary-color);
-    color: white;
+    background: var(--color-fondo);
     padding: 8px;
     z-index: 100;
 }
@@ -31,11 +36,33 @@ body {
     top: 0;
 }
 
+/* Reglas generales para encabezados y secciones */
+section {
+    padding: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-titulos);
+}
+
+ul, ol {
+    padding: 5px;
+    margin: 12px;
+}
+
+article {
+    padding: 0;
+}
+
+header {
+    background-color: var(--color-titulos);
+}
+
 nav {
-    background-color: rgb(47, 12, 3);
+    background-color: var(--color-fondo);
     border-width: 3px;   
     border-style: dashed;    
-    border-color: rgb(103, 18, 18); 
+    border-color: var(--color-titulos); 
     position: sticky;
     top: 0;
     z-index: 10;
@@ -50,7 +77,7 @@ nav ul {
 }
 
 nav a {
-    color: rgb(198, 7, 58);
+    color: var(--color-textos);
     text-decoration: none;
     padding: 0.5rem 1rem;
     display: block;
@@ -59,101 +86,166 @@ nav a {
 }
 
 nav a:hover {
-    background-color: rgb(118, 19, 49);
+    background-color: var(--color-titulos);
     border-radius: 4px;
 }
 
-.encabezado {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: 3rem 1rem;
-    background-color: rgba(160, 62, 62, 0.897);
-    box-shadow: var(--shadow);
-}
+.inicio {
+    background-color: var(--color-fondo);
+    border: 5px  solid var(--color-bordes-secciones);
+} 
 
-.foto {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px rgb(148, 2, 2);
-}
-.nombre {
-    color: var(--color);
-}
+@media screen and (max-width: 768px) {
+    .encabezado {
+        flex-direction: column;
+        text-align: center;  
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+        background-color: var(--color-fondo);
+    }
 
-.profesion {
-    color: var(--subheaders);
+    .foto {
+        width: 140px;
+        height: 140px;
+        border-radius: 2%;
+    }
 }
-
+.nombre, 
+.profesion, 
 .direccion {
-    color: var(--subheaders);
+    color: var(--color-textos);
 }
 
-section {
-    background-color: rgba(160, 62, 62, 0.897);
-    padding: 10px;
-}
+/* 
+.perfil {
+    /* Espaciado de la sección perfil
+} */
 
-h2 {
-    color: var(--color);
-}
-h3{
-    color: var(--subheaders);
-}
-h4 {
-    color: var(--subheaders);
-}
 details {
     padding: 10px;
     display: block;
     font-family: cursive;
+    text-align: center;
 }
-ul {
-    padding: 5px;
-    margin: 12px;
+
+summary {
+    cursor: pointer;
 }
+
+.rol {
+    border: 5px solid var(--color-bordes-tablas);
+}
+
+/* --------------------------------------------------------------------------
+   3.5 SECCIÓN: Habilidades Técnicas (#habilidades / .habilidades)
+   -------------------------------------------------------------------------- */
+.habilidades {
+    border: 5px solid var(--color-bordes-secciones);
+}
+
 .lista {
     font-size: 20px;
-    color: var(--subheaders);
+    color: var(--color-textos);
+}
+
+meter {
+    padding: 2px solid var(--color-bordes-tablas);
+}
+
+.cursos, .idiomas, .proyectos, .portafolio, .experiencia, .formacion {
+    border: 5px solid var(--color-bordes-secciones);
+}
+
+.lista-cert {
+    list-style-position: inside;
+    text-align: center;
+    padding: 0;
+    margin: 5px;
 }
 
 .tabla {
+    border-color: var(--color-bordes-tablas);
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
 }
-caption{
+
+caption {
     font-size: 2rem;
-    color: var(--color)
+    color: var(--color-titulos);
 }
+
 th, td {
     padding: 0.75rem;
     text-align: left;
-    border-bottom: 1px solid var(--subheaders);
+    border-bottom: 1px solid var(--color-titulos);
 }
 
 th {
-    background-color: rgb(185, 117, 117);
-    color: var(--color);
+    background-color: var(--color-fondo);
+    color: var(--color-titulos);
 }
+
+figure {
+    margin: 1rem 0;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: var(--color-textos);
+}
+
+/* --------------------------------------------------------------------------
+   3.10 SECCIÓN: Contacto (#contacto / .contacto)
+   -------------------------------------------------------------------------- */
 .contacto {
-    background-color:  rgb(111, 57, 73);
-    
+    background-color: var(--color-fondo);
 }
+
+form {
+    margin: 3px;
+    border-color: var(--color-boton);
+}
+
 fieldset {
     font-size: 1rem;
-    
-    border-color: rgb(111, 57, 73);
+    background-color: var(--color-fondo);
+    padding: 1rem;
+    border: 1px solid var(--color-bordes-secciones);
 }
-input, select, textarea, button {
-    background-color: rgb(185, 117, 117) ;
+
+legend {
+    color: var(--color-textos);
+    padding: 0 0.5rem;
 }
-label, legend, .ayuda{
-    color: var(--subheaders);
+
+label {
+    color: var(--color-textos);
 }
-footer{
-    background-color: rgba(160, 62, 62, 0.897);
+
+input, select, textarea {
+    background-color: var(--color-inputs);
+    border: 1px solid var(--color-bordes-tablas);
+    padding: 0.5rem;
+}
+
+button {
+    color: var(--color-boton-texto);
+    background-color: var(--color-boton);
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.ayuda {
+    color: var(--color-textos);
+}
+
+/* ==========================================================================
+   4. FOOTER (.derechos)
+   ========================================================================== */
+footer, .derechos {
+    background-color: var(--color-fondo);
+    padding: 1rem;
+    text-align: center;
 }
