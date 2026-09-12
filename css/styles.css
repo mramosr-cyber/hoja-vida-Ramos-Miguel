@@ -12,6 +12,7 @@
 
 * {
     box-sizing: border-box;
+    transition: background-color 0.5s ease, color 0.5s ease;
     margin: 0;
     padding: 0;
 }
@@ -73,6 +74,21 @@ nav a {
 nav a:hover {
     background-color: var(--color-titulos);
     border-radius: 4px;
+}
+
+#btn_modo {
+    margin: 5px;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+body.modo_oscuro {
+    --color-fondo: rgb(38, 32, 28);
+    --color-titulos: rgb(224, 137, 43); 
+    --color-textos: rgb(245, 238, 228);
+    --color-inputs: rgb(60, 50, 45);
+    --color-bordes-secciones: rgb(80, 70, 60);
+    --color-bordes-tablas: rgb(100, 90, 80);
 }
 
 .inicio {
