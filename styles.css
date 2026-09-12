@@ -1,0 +1,268 @@
+:root {
+    --color-fondo: rgb(245, 238, 228);
+    --color-titulos: rgb(194, 65, 12);
+    --color-textos: rgb(38, 32, 28);
+    --color-bordes-secciones: rgb(222, 206, 186);
+    --color-bordes-tablas: rgb(205, 185, 160);
+    --color-inputs: rgb(252, 248, 240);
+    --color-boton: rgb(217, 119, 6);
+    --color-boton-texto: rgb(255, 255, 255);
+    --borde--universal:  5px solid var(--color-bordes-tablas);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    background-color: var(--color-fondo);
+    color: var(--color-textos);
+}
+section {
+    padding: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-titulos);
+}
+
+ul, ol {
+    padding: 5px;
+    margin: 12px;
+}
+
+article {
+    padding: 0;
+}
+
+header {
+    background-color: var(--color-titulos);
+}
+
+nav {
+    background-color: var(--color-fondo);
+    border-width: 3px;   
+    border-style: dashed;    
+    border-color: var(--color-titulos); 
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem;
+}
+
+nav a {
+    color: var(--color-textos);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    font-weight: 400;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--color-titulos);
+    border-radius: 4px;
+}
+
+.inicio {
+    background-color: var(--color-fondo);
+    border: var(--borde--universal);
+} 
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;  
+    padding: 8px;
+    gap: 1.5rem;
+    background-color: var(--color-fondo);
+}
+
+.foto {
+    width: 150px; 
+    height: auto; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: var(--borde--universal);
+}
+
+.nombre, 
+.profesion, 
+.direccion {
+    color: var(--color-textos);
+}
+
+.perfil {
+    border: var(--borde--universal);
+} 
+
+details {
+    padding: 8px;
+    display: block;
+    font-family: cursive;
+    text-align: center;
+}
+
+summary {
+    cursor: pointer;
+}
+
+.rol {
+    border: var(--borde--universal);
+}
+
+/* --------------------------------------------------------------------------
+   3.5 SECCIÓN: Habilidades Técnicas (#habilidades / .habilidades)
+   -------------------------------------------------------------------------- */
+.habilidades {
+    border: var(--borde--universal);
+}
+
+.lista {
+    font-size: 20px;
+    color: var(--color-textos);
+}
+
+meter {
+    padding: var(--borde--universal);
+}
+
+.cursos, .idiomas, .proyectos, .portafolio, .experiencia, .formacion {
+    border: var(--borde--universal);
+}
+
+.lista-cert {
+    list-style-position: inside;
+    text-align: center;
+    padding: 0;
+    margin: 5px;
+}
+
+.tabla {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    margin-top: 1rem;
+    border: 1px solid var(--color-bordes-tablas);
+}
+
+.tabla thead, 
+.tabla tbody, 
+.tabla tr {
+    display: contents;
+}
+
+.tabla caption {
+    grid-column: 1 / -1;
+    font-size: 2rem;
+    color: var(--color-titulos);
+    padding: 8px 0;
+}
+
+.tabla th, .tabla td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-titulos);
+}
+.tabla th {
+    background-color: var(--color-titulos);
+    color: var(--color-fondo); 
+}
+@media screen and (max-width: 450px) {
+    .tabla th, 
+    .tabla td {
+        padding: 0.25rem; 
+        font-size: 0.8rem; 
+        word-break: break-word; 
+        hyphens: auto; 
+    }
+    
+    .tabla caption {
+        font-size: 1.5rem;
+    }
+}
+
+figure {
+    margin: 1rem 0;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: var(--color-textos);
+}
+
+figure img, 
+figure video {
+    max-width: 100%;  
+    height: auto;     
+    display: block;  
+}
+
+/* --------------------------------------------------------------------------
+   3.10 SECCIÓN: Contacto (#contacto / .contacto)
+   -------------------------------------------------------------------------- */
+.contacto {
+    background-color: var(--color-fondo);
+}
+
+form {
+    margin: 3px;
+    border-color: var(--color-boton);
+}
+
+fieldset {
+    font-size: 1rem;
+    background-color: var(--color-fondo);
+    padding: 6px;
+    border: 1px solid var(--color-bordes-secciones);
+}
+
+legend {
+    color: var(--color-textos);
+    padding: 0 0.5rem;
+}
+
+label {
+    color: var(--color-textos);
+}
+
+input, select, textarea {
+    background-color: var(--color-inputs);
+    border: 1px solid var(--color-bordes-tablas);
+    padding: 0.5rem;
+}
+
+button {
+    color: var(--color-boton-texto);
+    background-color: var(--color-boton);
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+textarea{
+    padding: 2px;
+    border: var(--borde--universal);
+}
+
+.ayuda {
+    color: var(--color-textos);
+}
+
+footer, .derechos {
+    background-color: var(--color-fondo);
+    padding: 1rem;
+    text-align: center;
+}
