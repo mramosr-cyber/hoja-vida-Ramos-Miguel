@@ -11,10 +11,10 @@
 </head>
 <body>
     <script src="js/script.js"></script>
-    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
     <header role="banner">
         <nav aria-label="Navegacion principal del sitio">
             <ul>
+                <li><a href="#main_content">Saltar al contenido principal</a></li>
                 <li><a href="#encabezado">Encabezado personal</a></li>
                 <li><a href="#perfil">Perfil profesional</a></li>
                 <li><a href="#formacion">Formacion Académica</a></li>
@@ -27,8 +27,9 @@
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav> 
-    <main id="main" class="inicio">
-    <section id="encabezado" class="encabezado" aria-labelledby="encabezado-heading">
+    </header>
+    <main id="main_content" class="inicio">
+    <section id="encabezado" class="encabezado" aria-labelledby="encabezado_heading">
         <img src="assets/images/foto.jpeg" class="foto"
             alt="Fotografía profesional Miguel Ramos">
 
@@ -42,10 +43,9 @@
             +591 63266500
         </address>
     </section>
-    </header>
     
-    <section id="perfil" class="perfil" aria-labelledby="perfil-heading">
-        <h2 id="perfil-heading">Perfil Profesional</h2>
+    <section id="perfil" class="perfil" aria-labelledby="perfil_heading">
+        <h2 id="perfil_heading">Perfil Profesional</h2>
         <details>
             <summary>
                 <strong>Presentacion personal</strong>
@@ -75,8 +75,8 @@
             para <mark>proyectos y colaborar en la resolucion de problemas</mark>, junto al manejo y creacion de Inteligencia Artificial.</p>
         </details>
     </section>
-    <section id="formacion" class="formacion" aria-labelledby="formacion-heading">
-        <h2 id="formacion-heading">Formacion Academica</h2>
+    <section id="formacion" class="formacion" aria-labelledby="formacion_heading">
+        <h2 id="formacion_heading">Formacion Academica</h2>
     <article>
         <h3>Ingeniería de Sistemas</h3>
         <p>Universidad Católica Boliviana</p>
@@ -84,9 +84,9 @@
         <time datetime="2029">2029</time>
     </article>
     </section>
-    <section id="experiencia" class="experiencia" aria-labelledby="experiencia-heading">
-        <h2 id="experiencia-heading">Experiencia profesional</h2>
-    <article id="card" class="rol">
+    <section id="experiencia" class="experiencia" aria-labelledby="experiencia_heading">
+        <h2 id="experiencia_heading">Experiencia profesional</h2>
+    <article class="rol">
         <h3>Rol desempeñado</h3>
         <p>Programador en un videojuego de C++</p>
         <p>Universidad Catolica Boliviana</p>
@@ -101,7 +101,7 @@
             <li>Mayor entendimiento al manejo de funciones y posibilidades que da el lenguaje <em>C++</em>.</li>
         </ol>
     </article>
-    <article id="card" class="rol">
+    <article class="rol">
         <h3>Rol desempeñado</h3>
         <p>Actor Principal y Performer de Repertorio</p>
         <p>Teatro Triskel</p>
@@ -116,7 +116,7 @@
             <li>Presentada y ganadora a mejor obra del concurso Raul Salmon de la Barra</li>
         </ol>
     </article>
-    <article id="card" class="rol">
+    <article class="rol">
         <h3>Rol desempeñado</h3>
         <p>Voluntario en un asilo de ancianos</p>
         <p>Asilo San Ramon</p>
@@ -131,7 +131,7 @@
         </ol>
     </article>
     </section>
-    <section id="habilidades" class="habilidades" aria-labelledby="habilidades-heading">
+    <section id="habilidades" class="habilidades" aria-labelledby="habilidades_heading">
         <h2 id="habilidades-heading">Habilidades Tecnicas</h2>
         <p class="lista">Lenguajes o tecnologias</p>
         <ul>
@@ -154,13 +154,13 @@
             <li>Aprendizaje continuo</li>
         </ul>
     </section>
-    <section id="cursos" class="cursos" aria-labelledby="cursos-heading">
+    <section id="cursos" class="cursos" aria-labelledby="cursos_heading">
         <h2 id="cursos-heading">Certificaciones y cursos</h2>
         <details>
             <summary>
                 <strong>Certificaciones</strong>
             </summary>
-            <ul class="lista-cert">
+            <ul class="lista_cert">
                 <li>Participacion en una charla de primeros auxilios: <time datetime="2022-01-18">2022-01-18.</time></li>
                 <li>Participacion en una charla de psicologia: <time datetime="2022-06-05">2022-06-05.</time></li>
             </ul>
@@ -169,7 +169,7 @@
             <summary>
                 <strong>Cursos</strong>
             </summary>
-            <ul class="lista-cert">
+            <ul class="lista_cert">
                 <li>Cursos de youtuber: <time datetime="2018-11-28">2018-11-28.</time></li>
                 <li>Cursos de canto veraniegos: <time datetime="2022-05-24">2022-05-14.</time></li>
                 <li>Cursos de piano: <time datetime="2016-02-05">2016-02-05.</time></li>
@@ -180,7 +180,7 @@
             <summary>
                 <strong>Talleres</strong>
             </summary>
-            <ul class="lista-cert">
+            <ul class="lista_cert">
                 <li>Taller de teatro UCB: <time datetime="2025-01-14">2025-01-14.</time></li>
                 <li>Taller actoral en teatro grito: <time datetime="2024-03-21">2024-03-21.</time></li>
                 <li>taller de oratoria: <time datetime="2025-03-17">2025-03-17.</time></li>
@@ -190,14 +190,14 @@
             <summary>
                 <strong>Seminarios</strong>
             </summary>
-            <ul class="lista-cert">
+            <ul class="lista_cert">
                 <li>Seminario de busqueda de profesion <time datetime="2024-08-24">2024-08-24.</time></li>
             </ul>
         </details>
     </section>
 
-    <section id="idiomas" class="idiomas" aria-labelledby="idiomas-heading">
-        <h2 id="idiomas-heading">Idiomas</h2>
+    <section id="idiomas" class="idiomas" aria-labelledby="idiomas_heading">
+        <h2 id="idiomas_heading">Idiomas</h2>
         <table border="1" cellpadding="8" cellspacing="0" class="tabla">
             <caption>Experiencia en idiomas</caption>
             <thead>
@@ -237,7 +237,7 @@
         </table>
     </section>
     
-    <section id="proyectos" class="proyectos" aria-labelledby="proyectos-heading">
+    <section id="proyectos" class="proyectos" aria-labelledby="proyectos_heading">
         <h2 id="proyectos-heading">Proyectos destacados</h2>
             <article>
                 <h3>Welcome to terrifier</h3>
@@ -273,13 +273,13 @@
                 <h6>Enlace al proyecto</h6><p><mark>en desarrollo</mark></p>
             </article>
     </section>
-    <section id="portafolio" class="portafolio" aria-labelledby="portafolio-heading">
-    <h2 id="portafolio-heading">Portafolio Multimedia</h2>
+    <section id="portafolio" class="portafolio" aria-labelledby="portafolio_heading">
+    <h2 id="portafolio_heading">Portafolio Multimedia</h2>
 
     <figure>
         <picture>
-            <source srcset="assets/images/proyecto-tutor.jpg" media="(max-width: 600px)">
-            <img src="assets/images/proyecto-tutor.jpg" alt="Captura de pantalla del inicio de tutor mundial">
+            <source srcset="assets/images/proyecto-tutor.jpg">
+            <img id="tutor" src="assets/images/proyecto-tutor.jpg" alt="Captura de pantalla del inicio de tutor mundial">
         </picture>
         <figcaption>Pantalla principal del programa <em>Tutor Mundial</em>.</figcaption>
     </figure>
@@ -301,8 +301,8 @@
         <figcaption>Demostración en video del funcionamiento de la aplicacion tutor.</figcaption>
     </figure>
     </section>
-    <section id="contacto" class="contacto" aria-labelledby="contacto-heading">
-        <h2 id="contacto-heading">Contacto</h2>
+    <section id="contacto" class="contacto" aria-labelledby="contacto_heading">
+        <h2 id="contacto_heading">Contacto</h2>
     <form action="#" method="post">
     <fieldset>
       <legend>Datos Personales</legend>
@@ -313,8 +313,8 @@
 
       <div>
         <label for="email">Correo electrónico:</label><br>
-        <input type="email" id="email" name="email" required aria-describedby="email-ayuda">
-        <small id="email-ayuda" class="ayuda">Ejemplo: usuario@dominio.com</small>
+        <input type="email" id="email" name="email" required aria-describedby="email_ayuda">
+        <small id="email_ayuda" class="ayuda">Ejemplo: usuario@dominio.com</small>
       </div><br>
 
       <div>
