@@ -7,6 +7,7 @@
     --color-inputs: rgb(252, 248, 240);
     --color-boton: rgb(217, 119, 6);
     --color-boton-texto: rgb(255, 255, 255);
+    --borde--universal:  5px solid var(--color-bordes-tablas);
 }
 
 * {
@@ -21,22 +22,6 @@ body {
     background-color: var(--color-fondo);
     color: var(--color-textos);
 }
-
-/* Accesibilidad */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: var(--color-fondo);
-    padding: 8px;
-    z-index: 100;
-}
-
-.skip-link:focus {
-    top: 0;
-}
-
-/* Reglas generales para encabezados y secciones */
 section {
     padding: 10px;
 }
@@ -92,37 +77,40 @@ nav a:hover {
 
 .inicio {
     background-color: var(--color-fondo);
-    border: 5px  solid var(--color-bordes-secciones);
+    border: var(--borde--universal);
 } 
 
-@media screen and (max-width: 768px) {
-    .encabezado {
-        flex-direction: column;
-        text-align: center;  
-        padding: 2rem 1rem;
-        gap: 1.5rem;
-        background-color: var(--color-fondo);
-    }
-
-    .foto {
-        width: 140px;
-        height: 140px;
-        border-radius: 2%;
-    }
+.encabezado {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;  
+    padding: 8px;
+    gap: 1.5rem;
+    background-color: var(--color-fondo);
 }
+
+.foto {
+    width: 150px; 
+    height: auto; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: var(--borde--universal);
+}
+
 .nombre, 
 .profesion, 
 .direccion {
     color: var(--color-textos);
 }
 
-/* 
 .perfil {
-    /* Espaciado de la sección perfil
-} */
+    border: var(--borde--universal);
+} 
 
 details {
-    padding: 10px;
+    padding: 8px;
     display: block;
     font-family: cursive;
     text-align: center;
@@ -133,14 +121,14 @@ summary {
 }
 
 .rol {
-    border: 5px solid var(--color-bordes-tablas);
+    border: var(--borde--universal);
 }
 
 /* --------------------------------------------------------------------------
    3.5 SECCIÓN: Habilidades Técnicas (#habilidades / .habilidades)
    -------------------------------------------------------------------------- */
 .habilidades {
-    border: 5px solid var(--color-bordes-secciones);
+    border: var(--borde--universal);
 }
 
 .lista {
@@ -149,11 +137,11 @@ summary {
 }
 
 meter {
-    padding: 2px solid var(--color-bordes-tablas);
+    padding: var(--borde--universal);
 }
 
 .cursos, .idiomas, .proyectos, .portafolio, .experiencia, .formacion {
-    border: 5px solid var(--color-bordes-secciones);
+    border: var(--borde--universal);
 }
 
 .lista-cert {
@@ -164,26 +152,47 @@ meter {
 }
 
 .tabla {
-    border-color: var(--color-bordes-tablas);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     width: 100%;
-    border-collapse: collapse;
     margin-top: 1rem;
+    border: 1px solid var(--color-bordes-tablas);
 }
 
-caption {
+.tabla thead, 
+.tabla tbody, 
+.tabla tr {
+    display: contents;
+}
+
+.tabla caption {
+    grid-column: 1 / -1;
     font-size: 2rem;
     color: var(--color-titulos);
+    padding: 8px 0;
 }
 
-th, td {
+.tabla th, .tabla td {
     padding: 0.75rem;
     text-align: left;
     border-bottom: 1px solid var(--color-titulos);
 }
-
-th {
-    background-color: var(--color-fondo);
-    color: var(--color-titulos);
+.tabla th {
+    background-color: var(--color-titulos);
+    color: var(--color-fondo); 
+}
+@media screen and (max-width: 450px) {
+    .tabla th, 
+    .tabla td {
+        padding: 0.25rem; 
+        font-size: 0.8rem; 
+        word-break: break-word; 
+        hyphens: auto; 
+    }
+    
+    .tabla caption {
+        font-size: 1.5rem;
+    }
 }
 
 figure {
@@ -193,6 +202,13 @@ figure {
 figcaption {
     font-size: 0.9rem;
     color: var(--color-textos);
+}
+
+figure img, 
+figure video {
+    max-width: 100%;  
+    height: auto;     
+    display: block;  
 }
 
 /* --------------------------------------------------------------------------
@@ -210,7 +226,7 @@ form {
 fieldset {
     font-size: 1rem;
     background-color: var(--color-fondo);
-    padding: 1rem;
+    padding: 6px;
     border: 1px solid var(--color-bordes-secciones);
 }
 
@@ -236,14 +252,15 @@ button {
     border: none;
     cursor: pointer;
 }
+textarea{
+    padding: 2px;
+    border: var(--borde--universal);
+}
 
 .ayuda {
     color: var(--color-textos);
 }
 
-/* ==========================================================================
-   4. FOOTER (.derechos)
-   ========================================================================== */
 footer, .derechos {
     background-color: var(--color-fondo);
     padding: 1rem;
