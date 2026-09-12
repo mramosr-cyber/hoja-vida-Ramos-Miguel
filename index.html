@@ -25,6 +25,7 @@
                 <li><a href="#proyectos">Proyectos destacados</a></li>
                 <li><a href="#portafolio">Portafolio Multimedia</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <li><button id="btn_modo">🌙 Modo Oscuro</button></li>
             </ul>
         </nav> 
     </header>
@@ -303,17 +304,17 @@
     </section>
     <section id="contacto" class="contacto" aria-labelledby="contacto_heading">
         <h2 id="contacto_heading">Contacto</h2>
-    <form action="#" method="post">
+    <form id="formulario_contacto" action="#" method="post">
     <fieldset>
       <legend>Datos Personales</legend>
       <div>
         <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,50}">
+        <input type="text" id="nombre" name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,50}">
       </div><br>
 
       <div>
         <label for="email">Correo electrónico:</label><br>
-        <input type="email" id="email" name="email" required aria-describedby="email_ayuda">
+        <input type="email" id="email" name="email" aria-describedby="email_ayuda">
         <small id="email_ayuda" class="ayuda">Ejemplo: usuario@dominio.com</small>
       </div><br>
 
@@ -327,7 +328,6 @@
       <div>
         <label for="motivo">Motivo de contacto:</label><br>
         <select id="motivo" name="motivo" required>
-          <option value="">Seleccione una opción</option>
           <option value="consulta">Consulta</option>
           <option value="informacion">Informacion</option>
           <option value="comentario">Comentario</option>
@@ -336,10 +336,10 @@
 
       <div>
         <label for="mensaje">Mensaje:</label><br>
-        <textarea id="mensaje" name="mensaje" rows="4" cols="40" required></textarea>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="40" ></textarea>
       </div><br>
       <div>
-        <input type="checkbox" id="aceptacion" name="aceptacion" required>
+        <input type="checkbox" id="aceptacion" name="aceptacion">
         <label for="aceptacion">Acepto las condiciones</label>
       </div>
     </fieldset><br>
